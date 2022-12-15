@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Ecommerce.Models.Uploads>
+@{
+    ViewData["Title"] = "Display";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h3>Products List</h3>
+    <table cellpadding="2" cellspacing="2" border="1">
+        <tr>
+            <th>Id</th>
+            <th>photo</th>
+            
+        </tr>
+        @foreach (var product in ViewBag.products)
+        {
+            <tr>
+                <td class="d-lg-table-cell">@product.Id</td>
+                <td class="d-lg-table-cell"><img src="@Url.Content(product.Name)" height="100" width="100" /></td>
+
+                <td align="center">
+                   <a asp-controller="cart" asp-action="buy" asp-route-id="@product.Id"> <img src="~/images/BuyNow.jpg" width="100" /></a>
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

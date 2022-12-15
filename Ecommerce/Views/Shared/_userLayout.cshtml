@@ -1,0 +1,123 @@
+﻿@using Microsoft.AspNetCore.Http;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="    https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="   https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            background-color: #f2eae3
+        }
+
+        .name {
+            font-size: 16px;
+            color: #e83d16 !important;
+            font-weight: 500
+        }
+
+        .navbar-toggler {
+            font-size: 15px
+        }
+
+        .nav-link {
+            font-size: 14px;
+            color: #000 !important;
+            font-weight: bold;
+            margin-left: 40px
+        }
+
+        .form-control {
+            height: 32px;
+            width: 100%;
+            border-radius: 20px;
+            color: #c7c6cb;
+            font-size: 13px;
+            border: none
+        }
+
+        .searchitem {
+            position: relative
+        }
+
+            .searchitem i {
+                position: absolute;
+                right: 18px;
+                top: 10px;
+                font-size: 13px
+            }
+
+        .btn {
+            height: 35px;
+            width: 170px;
+            border: none;
+            border-radius: 20px;
+            background-color: #633a9c;
+            font-size: 14px;
+            font-weight: 500
+        }
+
+        .text {
+            font-size: 23px;
+            font-weight: bold
+        }
+
+        .card {
+            height: 130px;
+            overflow: hidden;
+            border: none;
+            border-radius: 15px
+        }
+
+        .imagename {
+            font-size: 14px;
+            font-weight: bold
+        }</style>
+</head>
+<body>
+    <div>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand name" href="gosnippets.com" target="_blank">GoSnippets</a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">About</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#">Categories</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#">Blog</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#">Contact</a> </li>
+                        </ul>
+                        <form class="d-flex searchitem"> <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> <i class="fa fa-search"></i> </form>
+                    </div>
+                </div>
+            </nav>
+            <hr>
+            <footer>
+                <div class="row">
+                    <div class="col-md-6 text-md-end">
+                    </div>
+                </div>
+
+
+            </footer>
+
+
+            @RenderBody()
+
+
+
+
+
+</body>
+</html>
